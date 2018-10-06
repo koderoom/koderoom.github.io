@@ -18,6 +18,7 @@ const appRoutes: Routes = [
     CommonModule,
     RouterModule.forRoot(appRoutes)
   ],
+  exports: [RouterModule],
   declarations: [HomeComponent, Page1Component, Page2Component]
 })
 export class RouteModule { }
