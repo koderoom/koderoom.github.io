@@ -26,9 +26,9 @@
 
 ## Generate Component
 ```
-   ng g c home --spec=false
-   ng g c page1 --spec=false 
-   ng g c page2 --spec=false 
+   ng g c home --spec=false --module=route
+   ng g c page1 --spec=false --module=route
+   ng g c page2 --spec=false --module=route
 ```
 
 

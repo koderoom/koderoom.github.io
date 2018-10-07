@@ -6,11 +6,13 @@ import { HomeComponent } from './home/home.component';
 import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { Page3Component } from './page3/page3.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'page1', component: Page1Component},
   { path: 'page2', component: Page2Component},
+  { path: 'page3', component: Page3Component},
 ];
 
 
@@ -21,7 +23,7 @@ const appRoutes: Routes = [
     FlexLayoutModule
   ],
   exports: [RouterModule],
-  declarations: [HomeComponent, Page1Component, Page2Component]
+  declarations: [HomeComponent, Page1Component, Page2Component, Page3Component]
 })
 export class RouteModule { }
 
