@@ -4,6 +4,12 @@
 ```
     ng generate module route --spec=false --flat=true
 ```
+## Angular Flexlayout Module
+* [Angular Flexlayout](https://github.com/angular/flex-layout)
+```
+  npm install @angular/flex-layout --save
+```
+
 ## Angular Material Module
 * [Angular Material](https://material.angular.io/)
 ```
