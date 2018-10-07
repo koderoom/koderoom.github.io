@@ -1,7 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 90vh; }
 body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+/** POSITION **/
+.kr-fixed-top{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    min-height: 10vh;
+}
+
 
 /**  HEIGHT UTIL **/
 .kr-h50{
