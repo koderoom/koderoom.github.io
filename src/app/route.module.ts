@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 
 import { CommonModule } from '@angular/common';
@@ -22,17 +21,15 @@ const appRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forRoot(appRoutes),
-    FlexLayoutModule,
-    MatToolbarModule
   ],
   exports: [RouterModule],
-  declarations: [HomeComponent, Page1Component, Page2Component, Page3Component]
 })
 export class RouteModule { }
 
 export const RoutingComponents = [
   HomeComponent,
   Page1Component,
-  Page2Component
+  Page2Component,
+  Page3Component
 ];
 

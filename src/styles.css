@@ -9,7 +9,7 @@ body { margin: 0; font-family: 'Roboto', sans-serif; }
     top:0;
     left:0;
     right:0;
-    min-height: 10vh;
+    min-height: 8vh;
 }
 
 
@@ -42,3 +42,10 @@ body { margin: 0; font-family: 'Roboto', sans-serif; }
     margin-bottom:2px;
 }
 
+
+/** CENTER-UTIL **/
+.kr-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
