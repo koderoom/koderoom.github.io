@@ -1,5 +1,10 @@
 # Koderoom Home
 
+
+## Syntax Highlight
+* [Angular Syntax Highlight](https://github.com/MurhafSousli/ngx-highlightjs)
+* [Hightlight JS](https://highlightjs.org/)
+
 ## Typescript issue; 
 * For Angular CLI Version [6.1.5], following command could be useful. Typescript version in package.json
 ```

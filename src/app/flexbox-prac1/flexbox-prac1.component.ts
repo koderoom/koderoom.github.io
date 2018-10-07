@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlexboxPrac1Component implements OnInit {
 
+  someCode: string;
   constructor() { }
 
   ngOnInit() {
+    this.someCode = `
+    conainer {
+      display:flex;
+      justify-conent:center;
+      align-items:center;
+    }
+    `;
   }
+
 
 }
