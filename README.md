@@ -1,5 +1,12 @@
 # Koderoom Home
 
+## Typescript issue; 
+* For Angular CLI Version [6.1.5], following command could be useful. Typescript version in package.json
+```
+  "typescript": "~2.9.1", // or above.
+```
+
+
 ## Angular Flexlayout Module
 * [Angular Flexlayout](https://github.com/angular/flex-layout)
 ```
