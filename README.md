@@ -4,6 +4,11 @@
 ```
     ng generate module route --spec=false --flat=true
 ```
+## Angular Material Module
+* [Angular Material](https://material.angular.io/)
+```
+  ng add @angular/material
+```
 
 ## Generate Component
 ```
@@ -13,7 +18,7 @@
 ```
 
 
-
+## Github Page Setup
 * [Angular Cli](https://github.com/angular-schule/angular-cli-ghpages)
 ```
   npm i angular-cli-ghpages --save-dev
