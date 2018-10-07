@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
-
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -16,7 +17,8 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FlexLayoutModule
   ],
   exports: [RouterModule],
   declarations: [HomeComponent, Page1Component, Page2Component]
