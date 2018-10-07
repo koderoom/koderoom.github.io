@@ -21,11 +21,18 @@
               bred for hunting.
             </p>
           </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>LIVE DEMO</button>
-            <button mat-button>SOURCE CODE</button>
-            <button mat-button>WATCH AT YOUTUBE</button>
+          
+          <mat-card-actions fxShow.xs="true" fxHide.gt-xs="true">
+            <button mat-button>LIVE</button>
+            <button mat-button>SOURCE</button>
+            <button mat-button>YOUTUBE</button>
           </mat-card-actions>
+
+          <mat-card-actions fxHide.xs="true" fxShow.gt-xs="true">
+              <button mat-button>LIVE DEMO</button>
+              <button mat-button>SOURCE CODE</button>
+              <button mat-button>WATCH AT YOUTUBE</button>
+            </mat-card-actions>
         </mat-card>
   
     </div>
