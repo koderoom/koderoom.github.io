@@ -2,3 +2,33 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+/**  HEIGHT UTIL **/
+.kr-h50{
+    height: 50vh;
+}
+
+.kr-h100{
+    height: 100vh;
+}
+
+
+/** MARGIN UTIL **/
+.kr-mt-1{
+    margin-top:1px;
+}
+
+.kr-mt-2{
+    margin-top:2px;
+}
+
+.kr-my-1{
+    margin-top:1px;
+    margin-bottom:1px;
+}
+
+.kr-my-2{
+    margin-top:2px;
+    margin-bottom:2px;
+}
+
