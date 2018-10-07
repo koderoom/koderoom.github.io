@@ -1,9 +1,5 @@
 # KoderoomHome
 
-## Generate Additional Module
-```
-    ng generate module route --spec=false --flat=true
-```
 ## Angular Flexlayout Module
 * [Angular Flexlayout](https://github.com/angular/flex-layout)
 ```
@@ -14,6 +10,11 @@
 * [Angular Material](https://material.angular.io/)
 ```
   ng add @angular/material
+```
+
+## Generate Additional Module
+```
+    ng generate module route --spec=false --flat=true
 ```
 
 ## Generate Component
