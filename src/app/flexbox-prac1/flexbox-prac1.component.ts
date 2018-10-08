@@ -17,6 +17,12 @@ export class FlexboxPrac1Component implements OnInit {
         justify-conent:center;
         align-items:center;
       }`;
+
+    this.common.code2 = `
+      <div class='temp-class'>
+        <div></div>
+      </div>
+    `;
   }
 
 
