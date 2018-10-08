@@ -5,11 +5,13 @@ html {
 }
 
 body { 
-    min-height: 93vh; 
+    min-height: 100%; 
     margin: 0; 
     font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
     position: relative;
 }
+
+
 
 /** POSITION **/
 .kr-sticky-top{
@@ -17,7 +19,6 @@ body {
     top:0;
     left:0;
     right:0;
-    height: 60px;
 }
 
 
