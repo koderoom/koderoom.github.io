@@ -1,7 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
 
-html, body { height: 90vh; }
-body { margin: 0; font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif }
+body { 
+    min-height: 93vh; 
+    margin: 0; 
+    font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    position: relative;
+}
 
 /** POSITION **/
 .kr-fixed-top{
@@ -48,4 +56,19 @@ body { margin: 0; font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",He
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/** FOOTER **/
+.header{
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+}
+
+.footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
