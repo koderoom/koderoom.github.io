@@ -1,6 +1,6 @@
 
 <!-- PAGE CONTENT -->
-<div fxLayout="row" fxLayoutAlign="center start" style="margin-top:60px;">
+<div fxLayout="row" fxLayoutAlign="center start" [style.margin-top]="marginTop? '60px' : '0px'">
   
     <div fxFlex="60" fxFlex.lt-md="100"  fxLayout="column">
         <mat-toolbar color="primary" >  
@@ -8,7 +8,7 @@
                 <section class="mat-typography">
                     <span class="mat-subheading-2" style="white-space: normal;">
                         Using CSS Flexbox Layout - Center Align Element Across Axis
-                        </span>
+                    </span>
                 </section>  
             </mat-toolbar-row>
         </mat-toolbar> 

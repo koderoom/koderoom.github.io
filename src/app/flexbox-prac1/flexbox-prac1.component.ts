@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-flexbox-prac1',
@@ -6,11 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./flexbox-prac1.component.css']
 })
 export class FlexboxPrac1Component implements OnInit {
-
   common: any = {};
-  constructor() { }
+
+  @Input()
+  marginTop: boolean;
+
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit() {
+    if (this.router.url !== '/') {
+      this.marginTop = true;
+    }
+
     this.common.code1 = `
       conainer {
         display:flex;
