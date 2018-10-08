@@ -12,8 +12,8 @@ body {
 }
 
 /** POSITION **/
-.kr-fixed-top{
-    position: fixed;
+.kr-sticky-top{
+    position: sticky;
     top:0;
     left:0;
     right:0;
@@ -59,13 +59,6 @@ body {
 }
 
 /** FOOTER **/
-.header{
-    position: absolute;
-    right: 0;
-    top: 0;
-    left: 0;
-}
-
 .footer{
     position: absolute;
     right: 0;

@@ -9,18 +9,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class FlexboxPrac1Component implements OnInit {
   common: any = {};
 
-  @Input()
-  marginTop: boolean;
-
   constructor(
     private route: ActivatedRoute,
     private router: Router
   ) {}
 
   ngOnInit() {
-    if (this.router.url !== '/') {
-      this.marginTop = true;
-    }
+    console.log(this.router.url);
 
     this.common.code1 = `
       conainer {
