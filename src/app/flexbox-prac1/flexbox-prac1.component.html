@@ -1,18 +1,20 @@
-<mat-toolbar color="primary" style="margin-top:60px;">  
-    <mat-toolbar-row>
-        <section class="mat-typography">
-            <span class="mat-subheading-2" style="white-space: normal;">
-                USING CSS Flexbox Layout - Center Align Element Across Axis
-              </span>
-        </section>  
-    </mat-toolbar-row>
-</mat-toolbar>
+
 
 <!-- PAGE CONTENT -->
-<div fxLayout="row" fxLayoutAlign="center start" >
+<div fxLayout="row" fxLayoutAlign="center start" style="margin-top:60px;">
   
     <div fxFlex="60" fxFlex.lt-md="100"  fxLayout="column">
-      
+      <mat-toolbar color="primary" >  
+          <mat-toolbar-row>
+              <section class="mat-typography">
+                  <span class="mat-subheading-2" style="white-space: normal;">
+                      Using CSS Flexbox Layout - Center Align Element Across Axis
+                    </span>
+              </section>  
+          </mat-toolbar-row>
+      </mat-toolbar> 
+
+
       <mat-card>
           <mat-card-content>
             <article class="mat-typography">
@@ -39,7 +41,7 @@
             <button mat-button>YOUTUBE</button>
           </mat-card-actions>
 
-          <mat-card-actions fxHide.xs="true" fxShow.gt-xs="true">
+            <mat-card-actions fxHide.xs="true" fxShow.gt-xs="true">
               <button mat-button>LIVE DEMO</button>
               <button mat-button>SOURCE CODE</button>
               <button mat-button>WATCH AT YOUTUBE</button>
