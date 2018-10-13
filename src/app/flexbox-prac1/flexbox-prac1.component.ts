@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-flexbox-prac1',
@@ -10,12 +11,13 @@ export class FlexboxPrac1Component implements OnInit {
   common: any = {};
 
   constructor(
+    private titleService: Title,
     private route: ActivatedRoute,
     private router: Router
   ) {}
 
   ngOnInit() {
-    console.log(this.router.url);
+    this.titleService.setTitle('CSS | Flexbox | Center align child using css flexbox.');
 
     this.common.code1 = `
       conainer {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ObservableMedia} from '@angular/flex-layout';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-page3',
@@ -10,9 +11,14 @@ export class Page3Component implements OnInit {
   defaultbg: any = 'mediumslateblue';
   appbg: any = {};
 
-  constructor(public media: ObservableMedia ) { }
+  constructor(
+    public media: ObservableMedia,
+    private titleService: Title
+  ) { }
 
   ngOnInit() {
+    this.titleService.setTitle('Angular | Flexbox layout | Reponsive Background');
+
     this.media.subscribe((data) => {
       if (data.mqAlias === 'xs') {
         this.appbg.background = 'gold';
