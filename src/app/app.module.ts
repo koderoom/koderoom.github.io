@@ -9,6 +9,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 
+// ICONS
+import {MatIconModule} from '@angular/material/icon';
 
 import {RouteModule, RoutingComponents} from './route.module';
 import { AppComponent } from './app.component';
@@ -24,9 +26,11 @@ import { AppComponent } from './app.component';
     FlexLayoutModule,
     HighlightModule.forRoot(),
 
+    MatIconModule,
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
+
     RouteModule,
   ],
   providers: [],
