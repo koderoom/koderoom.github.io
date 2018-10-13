@@ -14,11 +14,10 @@ export class Page2Component implements OnInit {
     const title = 'Angular | Material | Flexbox Layout';
     this.titleService.setTitle(title);
 
-    const metaDataList: MetaDefinition[] = [
-      {'name' : 'description', 'content' : title},
-      {'name' : 'keywords', 'content' : 'ANGULAR, MATERIAL, FLEXLAYOUT'}
-    ];
-    this.metaService.addTags(metaDataList);
+    const metaDescription = {'name' : 'description', 'content' : title};
+    const metaKeywords = {'name' : 'keywords', 'content' : 'ANGULAR, MATERIAL, FLEXLAYOUT'};
+    this.metaService.updateTag(metaDescription);
+    this.metaService.updateTag(metaKeywords);
   }
 
 }

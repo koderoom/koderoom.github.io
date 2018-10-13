@@ -21,11 +21,10 @@ export class FlexboxPrac1Component implements OnInit {
     const title = 'CSS | Flexbox | Center align child using css flexbox.';
     this.titleService.setTitle(title);
 
-    const metaDataList: MetaDefinition[] = [
-      {'name' : 'description', 'content' : title},
-      {'name' : 'keywords', 'content' : 'CSS, FLEXBOX, CENTER ALIGN, HORIZONTAL AXIS, VERTICAL AXIS, ACROSS AXIS'}
-    ];
-    this.metaService.addTags(metaDataList);
+    const metaDescription = {'name' : 'description', 'content' : title};
+    const metaKeywords = {'name' : 'keywords', 'content' : 'CSS, FLEXBOX, CENTER ALIGN, HORIZONTAL AXIS, VERTICAL AXIS, ACROSS AXIS'};
+    this.metaService.updateTag(metaDescription);
+    this.metaService.updateTag(metaKeywords);
 
     this.common.code1 = `
       conainer {

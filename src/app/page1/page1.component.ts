@@ -13,11 +13,11 @@ export class Page1Component implements OnInit {
   ngOnInit() {
     const title = 'Flex Box | Center align child using css flexbox.';
     this.titleService.setTitle(title);
-    const metaDataList: MetaDefinition[] = [
-      {'name' : 'description', 'content' : title},
-      {'name' : 'keywords', 'content' : 'CSS, FLEXBOX'}
-    ];
-    this.metaService.addTags(metaDataList);
+
+    const metaDescription = {'name' : 'description', 'content' : title};
+    const metaKeywords = {'name' : 'keywords', 'content' : 'CSS, FLEXBOX'};
+    this.metaService.updateTag(metaDescription);
+    this.metaService.updateTag(metaKeywords);
 
   }
 
