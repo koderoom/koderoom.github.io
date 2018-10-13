@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-page1',
@@ -8,10 +8,17 @@ import { Title } from '@angular/platform-browser';
 })
 export class Page1Component implements OnInit {
 
-  constructor(private titleService: Title) { }
+  constructor(private titleService: Title, private metaService: Meta) { }
 
   ngOnInit() {
-    this.titleService.setTitle('Flex Box | Center align child using css flexbox.');
+    const title = 'Flex Box | Center align child using css flexbox.';
+    this.titleService.setTitle(title);
+    const metaDataList: MetaDefinition[] = [
+      {'name' : 'description', 'content' : title},
+      {'name' : 'keywords', 'content' : 'CSS, FLEXBOX'}
+    ];
+    this.metaService.addTags(metaDataList);
+
   }
 
 

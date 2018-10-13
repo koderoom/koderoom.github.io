@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ObservableMedia} from '@angular/flex-layout';
-import { Title } from '@angular/platform-browser';
+import { Title, MetaDefinition, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-page3',
@@ -13,11 +13,19 @@ export class Page3Component implements OnInit {
 
   constructor(
     public media: ObservableMedia,
-    private titleService: Title
+    private titleService: Title,
+    private metaService: Meta
   ) { }
 
   ngOnInit() {
-    this.titleService.setTitle('Angular | Flexbox layout | Reponsive Background');
+    const title = 'Angular | Material | Flexbox Layout | Reponsive Background';
+    this.titleService.setTitle(title);
+
+    const metaDataList: MetaDefinition[] = [
+      {'name' : 'description', 'content' : title},
+      {'name' : 'keywords', 'content' : 'ANGULAR, MATERIAL, FLEXLAYOUT, RESPONSIVE'}
+    ];
+    this.metaService.addTags(metaDataList);
 
     this.media.subscribe((data) => {
       if (data.mqAlias === 'xs') {

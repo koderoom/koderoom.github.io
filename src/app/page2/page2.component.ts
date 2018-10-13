@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-page2',
@@ -8,10 +8,17 @@ import { Title } from '@angular/platform-browser';
 })
 export class Page2Component implements OnInit {
 
-  constructor(private titleService: Title) { }
+  constructor(private titleService: Title, private metaService: Meta) { }
 
   ngOnInit() {
-    this.titleService.setTitle('Angular | Material | Flexbox Layout');
+    const title = 'Angular | Material | Flexbox Layout';
+    this.titleService.setTitle(title);
+
+    const metaDataList: MetaDefinition[] = [
+      {'name' : 'description', 'content' : title},
+      {'name' : 'keywords', 'content' : 'ANGULAR, MATERIAL, FLEXLAYOUT'}
+    ];
+    this.metaService.addTags(metaDataList);
   }
 
 }
