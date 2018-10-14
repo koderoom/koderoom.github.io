@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
+import { ObservableMedia } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-flexbox-prac1',
@@ -11,6 +12,7 @@ export class FlexboxPrac1Component implements OnInit {
   common: any = {};
 
   constructor(
+    public media: ObservableMedia,
     private titleService: Title,
     private metaService: Meta,
     private route: ActivatedRoute,
@@ -25,6 +27,10 @@ export class FlexboxPrac1Component implements OnInit {
     const metaKeywords = {'name' : 'keywords', 'content' : 'CSS, FLEXBOX, CENTER ALIGN, HORIZONTAL AXIS, VERTICAL AXIS, ACROSS AXIS'};
     this.metaService.updateTag(metaDescription);
     this.metaService.updateTag(metaKeywords);
+
+    this.media.subscribe((data) => {
+      
+    });
 
     this.common.code1 = `
       conainer {
