@@ -6,8 +6,8 @@
         <mat-toolbar color="primary" >  
             <mat-toolbar-row>
                 <section class="mat-typography">
-                    <a routerLink="/flexbox-prac1" mat-button class="mat-subheading-2" style="white-space: normal;">
-                        Using CSS Flexbox Layout - Center Align Element Across Axis
+                    <a [routerLink]="comp.routerLink" mat-button class="mat-subheading-2" style="white-space: normal;">
+                        {{comp.title}}
                     </a>
                 </section>  
             </mat-toolbar-row>
@@ -44,8 +44,7 @@
             <mat-card-content>
                 <summary>
                     <mat-chip-list>
-                        <mat-chip>CSS</mat-chip>
-                        <mat-chip>Flexbox</mat-chip>
+                        <mat-chip *ngFor="let item of comp.chipsList">{{item}}</mat-chip>
                     </mat-chip-list>
                 </summary>
             </mat-card-content>

@@ -35,6 +35,9 @@ export class FlexboxPrac1Component implements OnInit {
     this.metaService.updateTag(metaDescription);
     this.metaService.updateTag(metaKeywords);
 
+    this.comp.routerLink = '/flexbox-prac1';
+    this.comp.title = 'Using CSS Flexbox Layout - Center Align Element Across Axis';
+
     this.comp.linkDemo = {'title': CardActions.LIVE_DEMO, 'url': '#'};
     this.comp.linkSource = {'title': CardActions.SOURCE_CODE, 'url': '#'};
     this.comp.linkYoutube = {'title': CardActions.WATCH_AT_YOUTUBE, 'url': '#'};
@@ -47,15 +50,17 @@ export class FlexboxPrac1Component implements OnInit {
       }
     });
 
+    this.comp.chipsList = ['CSS', 'Flexbox'];
+
     this.comp.code1 = `
-      conainer {
+      container {
         display:flex;
         justify-conent:center;
         align-items:center;
       }`;
 
     this.comp.code2 = `
-      <div class='temp-class'>
+      <div class='container'>
         <div></div>
       </div>
     `;
