@@ -8,9 +8,14 @@
         </a>
         <span class="example-spacer"></span>
         
-        <mat-menu #appMenu="matMenu">
-            <button mat-menu-item>Settings</button>
-            <button mat-menu-item>Help</button>
+        <mat-menu #appMenu="matMenu" >
+            <div fxLayout="row wrap">
+                <button mat-menu-item fxFlex="50" *ngFor="let item of appThemeList" (click)="changeTheme(item)">
+                    <mat-icon class="example-icon" [style.color]="item.color">lens</mat-icon>
+                </button>
+            </div>
+            
+            
         </mat-menu>
           
         <button mat-icon-button [matMenuTriggerFor]="appMenu">
