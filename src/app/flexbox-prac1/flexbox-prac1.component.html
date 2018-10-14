@@ -19,7 +19,7 @@
                 <article class="mat-typography" style="text-align:justify;">
                     <p class="mat-subheading-2" >
                         Flexbox is very powerful CSS feature. It helps web designer to create responsive layout, and place the
-                        data/output at different position using property <mark>justify-content</mark> and <mark>align-items</mark>
+                        data/output at different position using property <mark>justify-content</mark> and <mark>align-items</mark>.
                     </p>
 
                     <p class="mat-subheading-2">
@@ -83,7 +83,7 @@
             <mat-card-actions>
                 <button mat-button>{{comp.linkDemo.title}}</button>
                 <button mat-button>{{comp.linkSource.title}}</button>
-                <button mat-button>{{comp.linkYoutube.title}}</button>
+                <button *ngIf="comp.linkYoutube.url !== '#'" mat-button>{{comp.linkYoutube.title}}</button>
             </mat-card-actions>
         </mat-card>
     </div>
