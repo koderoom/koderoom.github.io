@@ -11,6 +11,9 @@ import {MatButtonModule} from '@angular/material/button';
 
 // ICONS
 import {MatIconModule} from '@angular/material/icon';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatDividerModule} from '@angular/material/divider';
+
 
 import {RouteModule, RoutingComponents} from './route.module';
 import { AppComponent } from './app.component';
@@ -27,6 +30,8 @@ import { AppComponent } from './app.component';
     HighlightModule.forRoot(),
 
     MatIconModule,
+    MatChipsModule,
+    MatDividerModule,
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
