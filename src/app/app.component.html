@@ -10,8 +10,9 @@
         
         <mat-menu #appMenu="matMenu" >
             <div fxLayout="row wrap">
-                <button mat-menu-item fxFlex="50" *ngFor="let item of appThemeList" (click)="changeTheme(item)">
-                    <mat-icon class="example-icon" [style.color]="item.color">lens</mat-icon>
+                <button mat-menu-item fxFlex="50" *ngFor="let item of appThemeList" (click)="changeTheme(item)" style="margin-right:0px;">
+                    <mat-icon class="example-icon" [style.color]="item.color" style="margin:0px;">lens</mat-icon> 
+                    <span fxHide.xs="true" style="font-size:x-small;">{{item.title}}</span>
                 </button>
             </div>
         </mat-menu>

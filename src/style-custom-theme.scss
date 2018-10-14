@@ -37,7 +37,7 @@ $custom-pink-bluegrey: mat-light-theme($custom-pink-bluegrey-primary, $custom-pi
 $custom-purple-green-primary: mat-palette($mat-purple);
 $custom-purple-green-accent:  mat-palette($mat-green, A200, A100, A400);
 $custom-purple-green-warn:  mat-palette($mat-red);
-$custom-purple-green: mat-light-theme($custom-purple-green-primary, $custom-purple-green-accent, $custom-purple-green-warn);
+$custom-purple-green: mat-dark-theme($custom-purple-green-primary, $custom-purple-green-accent, $custom-purple-green-warn);
 .custom-purple-green{
     @include angular-material-theme($custom-purple-green);
 }
