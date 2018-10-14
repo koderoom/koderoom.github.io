@@ -9,8 +9,8 @@
         <span class="example-spacer"></span>
         
         <mat-menu #appMenu="matMenu" >
-            <div fxLayout="row wrap" style="max-width: 180px;">
-                <button mat-menu-item fxFlex="50" *ngFor="let item of appThemeList" (click)="changeTheme(item)" >
+            <div fxLayout="row wrap" style="max-width: 100px;">
+                <button mat-menu-item fxFlex="50" fxLayout="row" fxLayoutAlign="center center"  *ngFor="let item of appThemeList" (click)="changeTheme(item)" >
                     <mat-icon class="example-icon" [style.color]="item.color" >lens</mat-icon> 
                 </button>
             </div>
