@@ -37,6 +37,12 @@
    ng g c flex-prac-1 --spec=false --module=route
 ```
 
+## Generate Service
+```
+   ng g s common/commondata --spec=false
+```
+
+
 
 ## Github Page Setup
 * [Angular Cli](https://github.com/angular-schule/angular-cli-ghpages)

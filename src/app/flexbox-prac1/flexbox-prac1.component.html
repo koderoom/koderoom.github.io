@@ -25,11 +25,11 @@
                 </article>
 
                 <section>
-                    <pre><code highlight [code]="common.code1"></code></pre>
+                    <pre><code highlight [code]="comp.code1"></code></pre>
                 </section>
 
                 <section>
-                    <pre><code highlight [code]="common.code2"></code></pre>
+                    <pre><code highlight [code]="comp.code2"></code></pre>
                 </section>
 
                 <article class="mat-typography">
@@ -53,16 +53,10 @@
             <mat-divider></mat-divider>
             
             <!-- CARD ACTION SECTIONS -->
-            <mat-card-actions fxShow.xs="true" fxHide.gt-xs="true">
-                <button mat-button>LIVE</button>
-                <button mat-button>SOURCE</button>
-                <button mat-button>YOUTUBE</button>
-            </mat-card-actions>
-
-            <mat-card-actions fxHide.xs="true" fxShow.gt-xs="true">
-              <button mat-button>LIVE DEMO</button>
-              <button mat-button>SOURCE CODE</button>
-              <button mat-button>WATCH AT YOUTUBE</button>
+            <mat-card-actions>
+                <button mat-button>{{comp.linkDemo.title}}</button>
+                <button mat-button>{{comp.linkSource.title}}</button>
+                <button mat-button>{{comp.linkYoutube.title}}</button>
             </mat-card-actions>
         </mat-card>
     </div>
