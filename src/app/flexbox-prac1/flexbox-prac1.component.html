@@ -81,8 +81,8 @@
             
             <!-- CARD ACTION SECTIONS -->
             <mat-card-actions>
-                <button mat-button>{{comp.linkDemo.title}}</button>
-                <button mat-button>{{comp.linkSource.title}}</button>
+                <a target="_blank" [href]="comp.linkDemo.url" mat-button>{{comp.linkDemo.title}}</a>
+                <a target="_blank" [href]="comp.linkSource.url" mat-button>{{comp.linkSource.title}}</a>
                 <button *ngIf="comp.linkYoutube.url !== '#'" mat-button>{{comp.linkYoutube.title}}</button>
             </mat-card-actions>
         </mat-card>
