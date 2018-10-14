@@ -16,11 +16,22 @@
 
         <mat-card>
             <mat-card-content>
-                <article class="mat-typography">
+                <article class="mat-typography" style="text-align:justify;">
+                    <p class="mat-subheading-2" >
+                        Placing element/tag at the center of the screen is very common need while designing a layout. 
+                        CSS <mark>Flexbox</mark> is the easiest way to achieve the same. It has advantage over other apporach. 
+                        The avantage is, <mark>responsive</mark> nature of applicatoin remain intact, by not using hardcoded 
+                        margin and padding values. 
+                    </p>
+
                     <p class="mat-subheading-2">
-                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                        bred for hunting.
+                        To achieve our requirement, we have to understand how much area our element is taking. I mean 
+                        the height and width of the division block. let's suppose in our application is very simple with 
+                        one divsion block, with height and width both 100%. 
+                    </p>
+
+                    <p class="mat-subheading-2">
+                        Let's have a look at the below HTML code. 
                     </p>
                 </article>
 
@@ -28,17 +39,42 @@
                     <pre><code highlight [code]="comp.code1"></code></pre>
                 </section>
 
+                <p class="mat-subheading-2">
+                    Let's decode the above program. The body tag has one div block with three class. 
+                </p>
+
                 <section>
-                    <pre><code highlight [code]="comp.code2"></code></pre>
+                        <pre><code highlight [code]="comp.code2"></code></pre>
                 </section>
 
                 <article class="mat-typography">
                     <p class="mat-subheading-2">
-                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                        bred for hunting.
+                        The above css class describe the working area. It is full screen. 
                     </p>
                 </article>
+
+                <section>
+                    <pre><code highlight [code]="comp.code3"></code></pre>
+                </section>
+
+                <article class="mat-typography">
+                    <p class="mat-subheading-2">
+                        The above block of CSS class is the key. 
+                        The css propery <mark>justify-content:center</mark> place the data 
+                        element to center along the x-axis. And the <mark>align-items:center</mark> place the data element to center along y-axis. 
+                    </p>
+                </article>
+
+                <section>
+                        <pre><code highlight [code]="comp.code4"></code></pre>
+                </section>
+    
+                <article class="mat-typography">
+                    <p class="mat-subheading-2">
+                        The above css class is used only to beautify the output. 
+                    </p>
+                </article>
+
             </mat-card-content>
 
             <mat-card-content>

@@ -53,17 +53,60 @@ export class FlexboxPrac1Component implements OnInit {
     this.comp.chipsList = ['CSS', 'Flexbox'];
 
     this.comp.code1 = `
-      container {
-        display:flex;
-        justify-conent:center;
-        align-items:center;
-      }`;
+    <html lang="en">
+    <head>
+        <style>
+            .area {
+                height:100%;
+                width:100%;
+            }
 
-    this.comp.code2 = `
-      <div class='container'>
-        <div></div>
-      </div>
-    `;
+            .make-center{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .beautify{
+                background: tomato;
+                color: white;   
+                font-size: 100px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="area make-center beautify">
+            Hello World
+        </div>
+    </body>
+    </html>`;
+
+  this.comp.code2 = `
+    .area {
+      height:100%;
+      width:100%;
+    }
+  `;
+
+  this.comp.code3 = `
+    .make-center{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  `;
+
+  this.comp.code4 = `
+    .beautify{
+      background: tomato;
+      color: white;   
+      font-size: 100px;
+      font-weight: bold;
+    }
+  `;
+
   }
 
 

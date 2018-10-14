@@ -15,6 +15,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatListModule} from '@angular/material/list';
 
 
 import {RouteModule, RoutingComponents} from './route.module';
@@ -39,6 +40,7 @@ import { AppComponent } from './app.component';
     MatCardModule,
     MatButtonModule,
     MatTooltipModule,
+    MatListModule,
 
     RouteModule,
   ],
