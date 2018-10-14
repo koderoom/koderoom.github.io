@@ -38,8 +38,8 @@ export class FlexboxPrac1Component implements OnInit {
     this.comp.routerLink = '/flexbox-prac1';
     this.comp.title = 'Using CSS Flexbox Layout - Center Align Element Across Axis';
 
-    this.comp.linkDemo = {'title': CardActions.LIVE_DEMO, 'url': '#'};
-    this.comp.linkSource = {'title': CardActions.SOURCE_CODE, 'url': '#'};
+    this.comp.linkDemo = {'title': CardActions.LIVE_DEMO, 'url': 'https://koderoom.github.io/flexbox-practical1/'};
+    this.comp.linkSource = {'title': CardActions.SOURCE_CODE, 'url': 'https://github.com/koderoom/flexbox-practical1'};
     this.comp.linkYoutube = {'title': CardActions.WATCH_AT_YOUTUBE, 'url': '#'};
 
     this.media.subscribe((data) => {
