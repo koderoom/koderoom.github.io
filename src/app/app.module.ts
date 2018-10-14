@@ -13,6 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 import {RouteModule, RoutingComponents} from './route.module';
@@ -32,6 +33,7 @@ import { AppComponent } from './app.component';
     MatIconModule,
     MatChipsModule,
     MatDividerModule,
+    MatMenuModule,
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,

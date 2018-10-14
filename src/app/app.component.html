@@ -8,8 +8,13 @@
         </a>
         <span class="example-spacer"></span>
         
-        <button mat-button>
-            <mat-icon class="example-icon" (click)="changeTheme('custom-deep-purple')">favorite</mat-icon>
+        <mat-menu #appMenu="matMenu">
+            <button mat-menu-item>Settings</button>
+            <button mat-menu-item>Help</button>
+        </mat-menu>
+          
+        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+            <mat-icon class="example-icon">format_color_fill</mat-icon>
         </button>
     </mat-toolbar-row>
 </mat-toolbar>
