@@ -1,0 +1,33 @@
+@import '~@angular/material/theming';
+
+// Include non-theme styles for core.
+@include mat-core();
+
+// Define a custom-deep-purple.
+$custom-deep-purple-primary: mat-palette($mat-deep-purple);
+$custom-deep-purple-accent:  mat-palette($mat-amber, A200, A100, A400);
+$custom-deep-purple-warn:    mat-palette($mat-red);
+$custom-deep-purple: mat-light-theme($custom-deep-purple-primary, $custom-deep-purple-accent, $custom-deep-purple-warn);
+
+// Define a indigo-pink
+$custom-indigo-primary: mat-palette($mat-indigo);
+$custom-indigo-accent:  mat-palette($mat-pink, A200, A100, A400);
+$custom-indigo-warn:  mat-palette($mat-pink, A200, A100, A400);
+$custom-indigo-pink: mat-light-theme($custom-indigo-primary, $custom-indigo-accent, $custom-indigo-warn);
+
+// Define a pink-bluegrey
+$custom-pink-bluegrey-primary: mat-palette($mat-pink);
+$custom-pink-bluegrey-accent:  mat-palette($mat-grey, A200, A100, A400);
+$custom-pink-bluegrey-warn:  mat-palette($mat-pink, A200, A100, A400);
+$custom-pink-bluegrey: mat-light-theme($custom-pink-bluegrey-primary, $custom-pink-bluegrey-accent, $custom-pink-bluegrey-warn);
+
+
+// Define a purple-green
+$custom-purple-green-primary: mat-palette($mat-purple);
+$custom-purple-green-accent:  mat-palette($mat-green, A200, A100, A400);
+$custom-purple-green-warn:  mat-palette($mat-pink, A200, A100, A400);
+$custom-purple-green: mat-light-theme($custom-purple-green-primary, $custom-purple-green-accent, $custom-purple-green-warn);
+
+
+// Include all theme styles for the components.
+@include angular-material-theme($custom-purple-green);
