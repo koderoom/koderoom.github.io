@@ -37,9 +37,11 @@
    ng g c flex-prac-1 --spec=false --module=route
 ```
 
-## Generate Service
+## Generate Service/Enum
 ```
    ng g s common/commondata --spec=false
+
+   ng g enum common/appConstants --spec=false
 ```
 
 

@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 import { ObservableMedia } from '@angular/flex-layout';
 import { CommondataService } from 'src/app/common/commondata.service';
+import { CardActions } from 'src/app/common/app-constants.enum';
 
 @Component({
   selector: 'app-flexbox-prac1',
@@ -34,15 +35,15 @@ export class FlexboxPrac1Component implements OnInit {
     this.metaService.updateTag(metaDescription);
     this.metaService.updateTag(metaKeywords);
 
-    this.comp.linkDemo = {'title': 'LIVE DEMO', 'url': '#'};
-    this.comp.linkSource = {'title': 'SOURCE CODE', 'url': '#'};
-    this.comp.linkYoutube = {'title': 'WATCH AT YOUTUBE', 'url': '#'};
+    this.comp.linkDemo = {'title': CardActions.LIVE_DEMO, 'url': '#'};
+    this.comp.linkSource = {'title': CardActions.SOURCE_CODE, 'url': '#'};
+    this.comp.linkYoutube = {'title': CardActions.WATCH_AT_YOUTUBE, 'url': '#'};
 
     this.media.subscribe((data) => {
       if (data.mqAlias === 'xs') {
-        this.comp.linkDemo.title = 'DEMO';
-        this.comp.linkSource.title = 'SOURCE';
-        this.comp.linkYoutube.title = 'YOUTUBE';
+        this.comp.linkDemo.title = CardActions.DEMO;
+        this.comp.linkSource.title = CardActions.SOURCE;
+        this.comp.linkYoutube.title = CardActions.YOUTUBE;
       }
     });
 
