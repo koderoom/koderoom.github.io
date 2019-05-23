@@ -1,0 +1,90 @@
+<!-- HEADER -->
+<div class="container-fluid sticky-top">
+    <div class="row" style="height:3.5rem" [ngClass]="bgRef.BG">
+        <div class="col-8 make-left text-light ">
+            <a class="btn textify-header" href="/" [ngClass]="bgRef.BTN">{{title}}</a> 
+        </div>
+  
+        <div class="col-4 text-light make-right">
+            <a role="button" class="btn " [ngClass]="bgRef.BTN" [routerLink]="''">
+                Home 
+            </a>
+            
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" [ngClass]="bgRef.BTN" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Theme
+                </button>
+                <div class="dropdown-menu p-0" aria-labelledby="dropdownMenu2" >
+                    <ng-container *ngFor="let iobj of bgList">
+                        <button  *ngIf="iobj != bgRef" class="dropdown-item btn btn-sm {{iobj.BG}} text-light" type="button" (click)="uilayout(iobj);">&nbsp;</button>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="conainer-fluid">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-2 col-lg-3 d-flex flex-column align-items-center" style="max-height: calc(100vh - 3.5rem); z-index:999; position: sticky; top:3.5rem; overflow-y: scroll;">
+            <nav class="collapse d-md-block mt-1" id="sidenav" >
+                <button type="button" class="btn btn-sm text-light d-none d-md-block" [ngClass]="bgRef.BG" style="opacity:.9;">
+                    TOP PERFORMER <span class="badge badge-light">B-1</span> 
+                </button>
+                <ul class="nav flex-column " style="font-size:small;">
+                    <ng-container *ngFor="let iref of B1LIST">
+                        <li class="nav-item  animated zoomIn slower" *ngIf="iref.show" style="animation-iteration-count:2;">
+                            <a class="btn btn-link text-muted pl-0 pb-0" target="_blank" href="{{BASE_URL_DEMO + iref.rollid}}">{{iref.rollid}}</a>
+                        </li>
+                    </ng-container>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="col-12 col-sm-12 col-md-8 col-lg-6">
+
+            <ng-container *ngFor="let iobj of EXAM_LIST; let i=index;">
+                <div id="day{{iobj.id}}" *ngIf="iobj.show"  class="card bg-light mb-2 shadow-sm" [ngClass]="{'animated fadeIn' : i==index}">
+                    <h5 class="card-header text-light" [ngClass]="bgRef.BG">
+                        {{iobj.rollid}}
+                    </h5>
+    
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            <a target="_blank" href="{{iobj.demo_link}}" class="list-link">
+                                <span [innerHTML]="iobj.rollid"></span>
+                            </a> 
+                            <span class="d-flex justify-content-end align-items-center">
+                                <a target="_blank" href="{{iobj.source_link}}" class="badge badge-info badge-pill mr-1">Source</a>
+                                <a target="_blank" href="{{iobj.demo_link}}" class="badge badge-primary badge-pill">Demo</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </ng-container>
+        </div>
+
+
+        <div class="col-md-2 col-lg-3 d-flex flex-column align-items-center" style="max-height: calc(100vh - 3.5rem); z-index:999; position: sticky; top:3.5rem; overflow-y: scroll;">
+            <nav class="collapse d-md-block mt-1" id="sidenav2" >
+                <button type="button" class="btn btn-sm text-light d-none d-md-block" [ngClass]="bgRef.BG" style="opacity:.9;">
+                        TOP PERFORMER <span class="badge badge-light">B-2</span> 
+                </button>
+                <ul class="nav flex-column " style="font-size:small;">
+                    <ng-container *ngFor="let iref of B2LIST">
+                      <li class="nav-item  animated zoomIn slower" style="animation-iteration-count:2;" *ngIf="iref.show" >
+                          <a class="btn btn-link text-muted pl-0 pb-0" target="_blank" href="{{BASE_URL_DEMO + iref.rollid}}">{{iref.rollid}}</a>
+                      </li>
+                    </ng-container>
+                </ul>
+            </nav>
+        </div>
+
+
+    </div>
+
+</div>

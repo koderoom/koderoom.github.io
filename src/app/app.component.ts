@@ -1,23 +1,32 @@
-import { Component } from '@angular/core';
-import { AppThemes } from 'src/app/common/app-constants.enum';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { AppConstantsService } from 'src/app/common/app-constants.service';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+import 'bootstrap';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'koderoom-home';
+export class AppComponent implements OnInit, AfterViewInit {
+  title = 'Aug18Home';
+  public bgRef: any = {};
+  public faYoutube = faYoutube;
 
-  appThemeList = [
-        {'name' : AppThemes.CUSTOM_INDIGO_PINK, 'color': '#3F51B5', 'title' : 'Indigo Blue'},
-        {'name' : AppThemes.CUSTOM_DEEP_PURPLE, 'color': '#673AB7', 'title' : 'Deep Purple'},
-        {'name' : AppThemes.CUSTOM_PINK_BLUE_GREY, 'color': '#F44336', 'title' : 'Pink Grey'},
-        {'name' : AppThemes.CUSTOM_PURPLE_GREEN, 'color': '#9C27B0', 'title': 'Purple Green'},
-  ];
-  appTheme = AppThemes.CUSTOM_INDIGO_PINK;
+  public constructor(
+    public appConstatnts: AppConstantsService,
+  ) {}
 
-  changeTheme(item) {
-    this.appTheme = item.name;
+  public ngOnInit(): void {
+    this.appConstatnts.SEL_BG_REF_OBJ_AS_OBSERABLE.subscribe( (bgRef) => {
+      setTimeout(() => {
+        this.bgRef = bgRef;
+      }, 10);
+    });
+  }
+
+  public ngAfterViewInit() {
+    $('button').tooltip();
   }
 }

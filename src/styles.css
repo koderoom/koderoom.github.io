@@ -1,70 +1,48 @@
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
-
 /* You can add global styles to this file, and also import other style files */
-html {
-    height: 100%;
-    box-sizing: border-box;
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~animate.css/animate.min.css';
+
+
+.card {
+    transition: 0.5s;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2) !important;
 }
 
-body { 
-    min-height: 100%; 
-    margin: 0; 
-    font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
-    position: relative;
+.list-link{
+    text-decoration: none;
+    color: inherit;
 }
 
-
-
-/** POSITION **/
-.sticky-top{
-    position: sticky;
-    top:0;
-    left:0;
-    right:0;
-}
-
-
-/**  HEIGHT UTIL **/
-.h50{
-    height: 50vh;
-}
-
-.h100{
-    height: 100vh;
+.list-link:hover{
+    text-decoration: none;
+    color: inherit;
 }
 
 
-/** MARGIN UTIL **/
-.mt-1{
-    margin-top:1px;
+.make-left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.mt-2{
-    margin-top:2px;
+.make-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.my-1{
-    margin-top:1px;
-    margin-bottom:1px;
-}
-
-.my-2{
-    margin-top:2px;
-    margin-bottom:2px;
-}
-
-
-/** CENTER-UTIL **/
 .make-center{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/** FOOTER **/
-.footer{
-    position: absolute;
-    right: 0;
-    bottom: -65px;
-    left: 0;
+.textify-header{
+    font-size: x-large;
+    font-family: monospace;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #607D8B;
 }

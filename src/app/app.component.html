@@ -1,37 +1,12 @@
-<div [ngClass]="appTheme">
-
-<mat-toolbar color="primary" class="sticky-top mat-elevation-z4" style="z-index:99">  
-    <mat-toolbar-row>
-        <a routerLink="/" mat-button>
-            <mat-icon style="height:28px;">home</mat-icon>
-            Kode Room
-        </a>
-        <span class="example-spacer"></span>
-        
-        <mat-menu #appMenu="matMenu" >
-            <div fxLayout="row wrap" style="max-width: 100px;">
-                <button mat-menu-item fxFlex="50" fxLayout="row" fxLayoutAlign="center center"  *ngFor="let item of appThemeList" (click)="changeTheme(item)" >
-                    <mat-icon class="example-icon" [style.color]="item.color" >lens</mat-icon> 
-                </button>
-            </div>
-        </mat-menu>
-        
-        <a href="/aug-18" mat-button>
-            AUG 18
-        </a>
-        
-        <button matTooltip="Select a theme." mat-icon-button [matMenuTriggerFor]="appMenu">
-            <mat-icon class="example-icon">format_color_fill</mat-icon>
-        </button>
-    </mat-toolbar-row>
-</mat-toolbar>
-
-
 <router-outlet></router-outlet>
 
-<mat-toolbar color="primary" class="footer" style="z-index:99">  
-    <mat-toolbar-row>
-        <button mat-button>Koder Room Footer</button>
-    </mat-toolbar-row>
-</mat-toolbar>
+<div class="fixed-bottom d-flex justify-content-center animated pulse  slow" style="height: 3.5rem; animation-iteration-count: 2; cursor: pointer; z-index: 999;" [ngClass]="bgRef.BG">
+    <div style="font-size:large; font-weight: bold; font-family: monospace; padding: 10px; padding-right: 20px; ">
+        <a class="btn" href="https://www.youtube.com/channel/UCibrpNlsPs3wa1TfGya6Eyw?view_as=subscriber" target="_blank" [ngClass]="bgRef.BTN">
+            Please Like and Subscribe  
+            <span class="badge badge-danger badge-pill" style="font-size: large">
+                <fa-icon [icon]="faYoutube"></fa-icon>
+            </span> 
+        </a> 
+    </div> 
 </div>
