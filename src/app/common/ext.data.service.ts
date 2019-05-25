@@ -20,6 +20,131 @@ export class ExtDataService extends DataService {
     const AWEBP_FEATURED_ANGULAR_LIST = [];
 
 
+    // DAY - 4
+    const cardDay5 = {
+        "ID" : 5,
+        "TITLE" : "Day 5",
+        "HEADING" : "Post Perview and Dymaick Block of Image",
+        "DESC" : `Post Perview and Dymaick Block of Image`,
+
+        "DEMO_LIST" : [
+            {  
+                "ID":5, "TITLE": "Adding Like, Subscribe and Comment option for each block. (Adding icons with button)", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day5/3.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day5/3.html`,
+                "YOUTUBE_LINK": `https://youtu.be/OKEkZvygNlw`
+            },
+
+            {  
+                "ID":4, "TITLE": "Part 2 - Post Preview and add dynamic block of Video using Javascript.", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day5/2.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day5/2.html`,
+                "YOUTUBE_LINK": `https://youtu.be/SeeVQQGASLA`
+            },
+
+            {  
+                "ID":3, "TITLE": "Part 1 - Post and Preview Video block UI Simulation.", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day5/2.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day5/2.html`,
+                "YOUTUBE_LINK": `https://youtu.be/Dnhp-0IvR_8`
+            },
+
+            {  
+                "ID":2, "TITLE": "Part 2 - Post Preview and add dynamic block of image using Javascript.", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day5/1.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day5/1.html`,
+                "YOUTUBE_LINK": `https://youtu.be/7WW4s00o5Hg`
+            },
+            {  
+                "ID":1, "TITLE": "Part 1 - Post Preview Image UI Simulation", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day5/1.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day5/1.html`,
+                "YOUTUBE_LINK": `https://youtu.be/ZDT7BiEBVBA`
+            },
+        ],
+
+        "ASSIGNMENT_LIST" : [
+            {"ID":1, "TITLE": "HTML Image Element, SRC Attribute, ObjectFit Style Attribute"},
+            {"ID":2, "TITLE": "URL, converting fileobject as url."},
+        ]
+    };
+    AWEBP_CARD_LIST.push(cardDay5);
+
+
+    // DAY - 4
+    const cardDay4 = {
+        "ID" : 4,
+        "TITLE" : "Day 4",
+        "HEADING" : "Bootstrap CSS Framework, Document Object and jQuery Library.",
+        "DESC" : `Bootstrap CSS Framework, Document Object and jQuery Library.`,
+
+        "DEMO_LIST" : [
+            {  
+                "ID":7, "TITLE": "Part 4 Add DOM operation to using #document and #jQuery in the Application.", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day4/3.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day4/3.html`,
+                "YOUTUBE_LINK": `https://youtu.be/kgXJXdMROB0`
+            },
+
+            {  
+                "ID":6, "TITLE": "Part 3 - Application layout design using CSS framework Bootstrap. (Add Input Box)", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day4/2.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day4/2.html`,
+                "YOUTUBE_LINK": `https://youtu.be/gfSDy7Tkta0`
+            },
+
+            {  
+                "ID":6, "TITLE": "Part 3 - Application layout design using CSS framework Bootstrap. (Add Input Box)", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day4/2.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day4/2.html`,
+                "YOUTUBE_LINK": `https://youtu.be/gfSDy7Tkta0`
+            },
+
+            {  
+                "ID":5, "TITLE": "Part 2 - Application layout design using CSS framework Bootstrap. (Add Main Section)", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day4/2.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day4/2.html`,
+                "YOUTUBE_LINK": `https://youtu.be/vwn__Ep7bvI`
+            },
+
+            {  
+                "ID":4, "TITLE": "Part 1 - Application layout design using CSS framework Bootstrap. (Add Navbar)", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day4/2.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day4/2.html`,
+                "YOUTUBE_LINK": `https://youtu.be/87422PRleTQ`
+            },
+
+            {  
+                "ID":3, "TITLE": "How to add Bootstrap CSS framework into project and check linked successfully?", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day4/2.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day4/2.html`,
+                "YOUTUBE_LINK": `https://youtu.be/B-oBbN1EQXQ`
+            },
+
+            {  
+                "ID":2, "TITLE": "How to DOM operation using jQuery?", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day4/1.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day4/1.html`,
+                "YOUTUBE_LINK": `https://youtu.be/yPDz58gXgmI`
+            },
+
+            {  
+                "ID":1, "TITLE": "How to add jQuery into project, and cross check linked successfully?", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day4/1.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day4/1.html`,
+                "YOUTUBE_LINK": `https://youtu.be/CtykJZ12VAA`
+            },
+
+        ],
+
+        "ASSIGNMENT_LIST" : [
+            {"ID":1, "TITLE": "jQuery DOM Operation"},
+            {"ID":2, "TITLE": "Layout design using Bootstrap."},
+        ]
+    };
+    AWEBP_CARD_LIST.push(cardDay4);
+
+
     // DAY - 3
     const cardDay3 = {
         "ID" : 3,
@@ -246,6 +371,9 @@ export class ExtDataService extends DataService {
 
 
     /** FEATURE LIST ANGULAR */
+    const featuredAngular5= { "ID" : 1,"TITLE" : "Image Block", "SHOW" : true, "YOUTUBE_LINK" : `https://youtu.be/ZDT7BiEBVBA`};
+    AWEBP_FEATURED_ANGULAR_LIST.push(featuredAngular5);
+
     const featuredAngular4= { "ID" : 1,"TITLE" : "DOM Operation", "SHOW" : true, "YOUTUBE_LINK" : `https://youtu.be/1Yq3wIQOPng`};
     AWEBP_FEATURED_ANGULAR_LIST.push(featuredAngular4);
 
