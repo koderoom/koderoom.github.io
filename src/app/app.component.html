@@ -1,3 +1,39 @@
+<!-- HEADER -->
+<div class="container-fluid sticky-top">
+    <div class="row" style="height:3.5rem" [ngClass]="bgRef.BG">
+        <div class="col-8 make-left text-light ">
+            <a class="btn textify-header" href="/" [ngClass]="bgRef.BTN">{{title}}</a> 
+        </div>
+  
+        
+        <div class="col-4 text-light make-right">
+          <div class="dropdown">
+              <button #refeld (click)="toggleDropdown(refeld)" class="btn dropdown-toggle" [ngClass]="bgRef.BTN" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{selMenu.DISPLAY}}
+              </button>
+              <div class="dropdown-menu p-0" aria-labelledby="dropdownMenu2" >
+                  <ng-container *ngFor="let iobj of menuList">
+                      <button *ngIf="iobj.active" class="dropdown-item btn btn-sm {{bgRef.BG}} text-light" type="button" (click)="toggleMenu(iobj, refeld);">{{iobj.DISPLAY}}</button>
+                  </ng-container>
+              </div>
+          </div>
+  
+          <div class="dropdown">
+          <button #refele (click)="toggleDropdown(refele)" class="btn dropdown-toggle" [ngClass]="bgRef.BTN" type="button" id="dropdownMenuTheme" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Theme
+          </button>
+          <div class="dropdown-menu p-0" aria-labelledby="dropdownMenuTheme" >
+              <ng-container *ngFor="let iobj of bgList">
+                  <button  *ngIf="iobj != bgRef" class="dropdown-item btn btn-sm {{iobj.BG}} text-light" type="button" (click)="uilayout(iobj, refele);">&nbsp;</button>
+              </ng-container>
+          </div>
+          </div>
+  
+        </div>
+    </div>
+</div>
+  
+
 <router-outlet></router-outlet>
 
 <div class="fixed-bottom d-flex justify-content-center animated pulse  slow" style="height: 3.5rem; animation-iteration-count: 2; cursor: pointer; z-index: 999;" [ngClass]="bgRef.BG">

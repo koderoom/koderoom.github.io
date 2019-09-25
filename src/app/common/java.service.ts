@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
+export class JavaService {
+
   CARD_LIST:any[];
   FEATURED_LIST:any[];
   FEATURED_ANGULAR_LIST:any[];
@@ -745,4 +746,3 @@ export class DataService {
     this.FEATURED_ANGULAR_LIST = FEATURED_ANGULAR_LIST;
   }
 }
-

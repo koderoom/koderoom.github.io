@@ -1,13 +1,14 @@
-import { Injectable } from "@angular/core";
-import { DataService } from "src/app/common/data.service";
+import { Injectable } from '@angular/core';
+import { DataService } from 'src/app/common/data.service';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
-export class ExtDataService extends DataService {
-    AWEBP_CARD_LIST:any[];
-    AWEBP_FEATURED_LIST:any[];
-    AWEBP_FEATURED_ANGULAR_LIST:any[];
+export class AwebpService extends DataService {
+
+    public CARD_LIST:any[];
+    public FEATURED_LIST:any[];
+    public FEATURED_ANGULAR_LIST:any[];
 
   constructor() { 
     super(); 
@@ -15,10 +16,200 @@ export class ExtDataService extends DataService {
     const BASE_URL = "https://koderoom.github.io";
     const BASE_URL_DEMO = `https://koderoom.github.io/aug-19-webdemo`;
     const BASE_URL_SOURCE = `https://github.com/koderoom/aug-19-webdemo`;
-    const AWEBP_CARD_LIST = [];
-    const AWEBP_FEATURED_LIST = [];
-    const AWEBP_FEATURED_ANGULAR_LIST = [];
+    const CARD_LIST = [];
+    const FEATURED_LIST = [];
+    const FEATURED_ANGULAR_LIST = [];
 
+    // DAY - 8
+    const cardDay9 = {
+        "ID" : 9,
+        "TITLE" : "Day 9",
+        "HEADING" : "Bootstrap Responsive",
+        "DESC" : `Bootstrap and Responsive`,
+
+        "DEMO_LIST" : [
+            {  
+                "ID":3, "TITLE": "How to make #web #application #responsive using #bootstrap?", 
+                "SOURCE_LINK" : `https://github.com/koderoom/kodebook`,
+                "DEMO_LINK" : `https://koderoom.github.io/kodebook/`, 
+                "YOUTUBE_LINK": `https://youtu.be/qyPFqiM7vlA`
+            },
+        ],
+
+        "ASSIGNMENT_LIST" : [
+            {"ID":1, "TITLE": "Make application responsive using bootstrap."},
+        ]
+    };
+    CARD_LIST.push(cardDay9);
+
+    // DAY - 8
+    const cardDay8 = {
+        "ID" : 8,
+        "TITLE" : "Day 8",
+        "HEADING" : "Live Coding with #Angular, #Bootstrap",
+        "DESC" : `Live Coding with #Angular, #Bootstrap`,
+
+        "DEMO_LIST" : [
+            {  
+                "ID":3, "TITLE": "#Live Coding, #Facebook Feature #Simulation in #Angular and #Bootstrap", 
+                "SOURCE_LINK" : `https://github.com/koderoom/kodebook`,
+                "DEMO_LINK" : `https://koderoom.github.io/kodebook/`, 
+                "YOUTUBE_LINK": `https://youtu.be/Qq88kYlnY7Q`
+            },
+
+            {  
+                "ID":1, "TITLE": "How to use *ngFor and *ngIf in #Angular?", 
+                "SOURCE_LINK" : `https://github.com/koderoom/angular-first`,
+                "DEMO_LINK" : `https://koderoom.github.io/angular-first/`, 
+                "YOUTUBE_LINK": `https://youtu.be/8vHD2OOfgFU`
+            },
+
+            {  
+                "ID":2, "TITLE": "Working with List of #UserDefine Class in #Angular", 
+                "SOURCE_LINK" : `https://github.com/koderoom/angular-first`,
+                "DEMO_LINK" : `https://koderoom.github.io/angular-first/`, 
+                "YOUTUBE_LINK": `https://youtu.be/G-i-5qqdCNE`
+            },
+        ],
+
+        "ASSIGNMENT_LIST" : [
+            {"ID":1, "TITLE": "Apply loop and codition directive Angular."},
+        ]
+    };
+    CARD_LIST.push(cardDay8);
+
+
+    // DAY - 7
+    const cardDay7 = {
+        "ID" : 7,
+        "TITLE" : "Day 7",
+        "HEADING" : "ES6, TypesScript and Angular Fundamental",
+        "DESC" : `ES6, TypesScript and Angular Fundamental`,
+
+        "DEMO_LIST" : [
+            {  
+                "ID":1, "TITLE": "7.1 Fundamentals of ES6. How to compile and run ES6 program in console?", 
+                "YOUTUBE_LINK": `https://youtu.be/_VKZrvaw6Dc`,
+                "SOURCE_LINK" : `https://github.com/koderoom/meanstack/blob/master/src/main.js`,
+            },
+
+            {  
+                "ID":2, "TITLE": "7.2 How to import and export modules in ES6?", 
+                "YOUTUBE_LINK": `https://youtu.be/j5MartizMvY`,
+                "SOURCE_LINK" : `https://github.com/koderoom/meanstack/blob/master/src/main.js`,
+            },
+
+            {  
+                "ID":3, "TITLE": "7.3 Fundamentals of TypeScript. How to compile and run #typescript program in console?", 
+                "YOUTUBE_LINK": `https://youtu.be/kbSf2OSVPso`,
+                "SOURCE_LINK" : `https://github.com/koderoom/meanstack/blob/master/src/ts/main.ts`,
+            },
+
+            {  
+                "ID":4, "TITLE": "7.4 Hello Angular. How to #setup #first #Angular project.", 
+                "SOURCE_LINK" : `https://github.com/koderoom/angular-first`,
+                "DEMO_LINK" : `https://koderoom.github.io/angular-first/`,
+                "YOUTUBE_LINK": `https://youtu.be/RD7EzEauMd8`
+            },
+            {  
+                "ID":5, "TITLE": "7.5 Fundamentals of #Angular #Project Folder Structure.", 
+                "SOURCE_LINK" : `https://github.com/koderoom/angular-first`,
+                "DEMO_LINK" : `https://koderoom.github.io/angular-first/`,
+                "YOUTUBE_LINK": `https://youtu.be/LpzQ5-2JYwU`
+            },
+            {  
+                "ID":6, "TITLE": "7.6 Data Binding in Angular using #interpolation", 
+                "SOURCE_LINK" : `https://github.com/koderoom/angular-first`,
+                "DEMO_LINK" : `https://koderoom.github.io/angular-first/`,
+                "YOUTUBE_LINK": `https://youtu.be/lkY_g_82o_I`
+            },
+            {  
+                "ID":7, "TITLE": "7.7 Let's Implement Simple Counter in Angular, using Data Binding. (Interpolation and View to Controller.)", 
+                "SOURCE_LINK" : `https://github.com/koderoom/angular-first`,
+                "DEMO_LINK" : `https://koderoom.github.io/angular-first/`,
+                "YOUTUBE_LINK": `https://youtu.be/V2OchF-3i3k`
+            },
+            {  
+                "ID":8, "TITLE": "7.8 Basics of App Module in #Angular",
+                "SOURCE_LINK" : `https://github.com/koderoom/angular-first`,
+                "DEMO_LINK" : `https://koderoom.github.io/angular-first/`, 
+                "YOUTUBE_LINK": `https://youtu.be/Y_IZCcF3Y3A`
+            },
+            {  
+                "ID":9, "TITLE": "7.9 Bi-Directional Data Binding in #Angular.", 
+                "SOURCE_LINK" : `https://github.com/koderoom/angular-first`,
+                "DEMO_LINK" : `https://koderoom.github.io/angular-first/`, 
+                "YOUTUBE_LINK": `https://youtu.be/XVRiZ5Zjk7g`
+            },
+            {  
+                "ID":10, "TITLE": "7.10 Integrate #bootstrap in #angular", 
+                "SOURCE_LINK" : `https://github.com/koderoom/angular-first`,
+                "DEMO_LINK" : `https://koderoom.github.io/angular-first/`, 
+                "YOUTUBE_LINK": `https://youtu.be/a-UacGK1hDA`
+            },
+        ],
+
+        "ASSIGNMENT_LIST" : [
+            {"ID":1, "TITLE": "Compile And Run ES6 program"},
+            {"ID":2, "TITLE": "Compile And Run TS program"},
+            {"ID":3, "TITLE": "Setup Angular Project"},
+            {"ID":4, "TITLE": "Practice Data Binding"},
+            {"ID":5, "TITLE": "Integrate Bootstrap into project"},
+        ]
+    };
+    CARD_LIST.push(cardDay7);
+
+
+    // DAY - 6
+    const cardDay6 = {
+        "ID" : 6,
+        "TITLE" : "Day 6",
+        "HEADING" : "NODEJS, NPM Fundatemental",
+        "DESC" : `NODEJS, NPM Fundatemental`,
+
+        "DEMO_LIST" : [
+            {  
+                "ID":1, "TITLE": "6.1 How to install and setup NodeJS?", 
+                "YOUTUBE_LINK": `https://youtu.be/njeoystjCqo`
+            },
+
+            {  
+                "ID":2, "TITLE": "6.2 How to setup nodejs and web project using NPM?", 
+                "YOUTUBE_LINK": `https://youtu.be/kMLkQetzxgA`
+            },
+
+            {  
+                "ID":3, "TITLE": "6.3 How to install module/package using NPM. [Install bootstrap and lite-server]", 
+                "YOUTUBE_LINK": `https://youtu.be/Oc6dlujaI5w`
+            },
+
+            {  
+                "ID":4, "TITLE": "6.4 How to configure, start and access #lite-server for web project?", 
+                "YOUTUBE_LINK": `https://youtu.be/mM2SF3SgyiI`
+            },
+            {  
+                "ID":5, "TITLE": "6.5 How to use #bootstrap and #fontawesome css installed using NPM?", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day5/3.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day5/3.html`,
+                "YOUTUBE_LINK": `https://youtu.be/sXclxxCjG_A`
+            },
+            {  
+                "ID":6, "TITLE": "6.6 JSON handson session", 
+                "YOUTUBE_LINK": `https://youtu.be/q1Ck1UUlMWo`
+            },
+            {  
+                "ID":7, "TITLE": "6.7 Implement like and subscribe, make it interactive using client side #javascript for each dynamic post.", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day6/1.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day6/1.html`,
+                "YOUTUBE_LINK": `https://youtu.be/X1pFgCJgtgU`
+            },
+        ],
+
+        "ASSIGNMENT_LIST" : [
+            {"ID":1, "TITLE": "Install NodeJS and make your project NodeJS aware."},
+        ]
+    };
+    CARD_LIST.push(cardDay6);
 
     // DAY - 4
     const cardDay5 = {
@@ -68,7 +259,7 @@ export class ExtDataService extends DataService {
             {"ID":2, "TITLE": "URL, converting fileobject as url."},
         ]
     };
-    AWEBP_CARD_LIST.push(cardDay5);
+    CARD_LIST.push(cardDay5);
 
 
     // DAY - 4
@@ -142,7 +333,7 @@ export class ExtDataService extends DataService {
             {"ID":2, "TITLE": "Layout design using Bootstrap."},
         ]
     };
-    AWEBP_CARD_LIST.push(cardDay4);
+    CARD_LIST.push(cardDay4);
 
 
     // DAY - 3
@@ -205,7 +396,7 @@ export class ExtDataService extends DataService {
             {"ID":5, "TITLE": "DOM Add Remove Object"},
         ]
     };
-    AWEBP_CARD_LIST.push(cardDay3);
+    CARD_LIST.push(cardDay3);
 
 
     // DAY - 2
@@ -298,53 +489,23 @@ export class ExtDataService extends DataService {
             {"ID":9, "TITLE": "How to center align an image in HTML?"},
         ]
     };
-    AWEBP_CARD_LIST.push(cardDay2);
+    CARD_LIST.push(cardDay2);
     
     // DAY - 1
     const cardDay1 = {
         "ID" : 1,
+        "ACTIVE" : true,
         "TITLE" : "Day 1",
-        "HEADING" : "Designing layout using Html and CSS",
-        "DESC" : `Designing layout using Html and CSS`,
+        "HEADING" : "HTML & CSS Fundamental",
+        "DESC" : `HTML & CSS Fundamental`,
 
         "DEMO_LIST" : [
             {  
-                "ID":1, "TITLE": "HTML Tags Basics", 
+                "ID":1, "TITLE": "HTML & CSS Fundamental", 
                 "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day1/1.html`,
                 "DEMO_LINK" : `${BASE_URL_DEMO}/day1/1.html`
             },
 
-            {  
-                "ID":2, "TITLE": "CSS Styling - Inline, Internal & External", 
-                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day1/2.html`,
-                "DEMO_LINK" : `${BASE_URL_DEMO}/day1/2.html`
-            },
-
-            {  
-                "ID":3, "TITLE": "Center Align Element reference to window screen.", 
-                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day1/3.html`,
-                "DEMO_LINK" : `${BASE_URL_DEMO}/day1/3.html`
-            },
-
-            {  
-                "ID":4, "TITLE": "Vertically divide screen into two sections, and center align children", 
-                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day1/4.html`,
-                "DEMO_LINK" : `${BASE_URL_DEMO}/day1/4.html`
-            },
-
-            {  
-                "ID":5, "TITLE": "Horizontall divide screen into two sections, and center align children", 
-                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day1/5.html`,
-                "DEMO_LINK" : `${BASE_URL_DEMO}/day1/5.html`,
-                "YOUTUBE_LINK": `https://youtu.be/TvWV_W7LzVQ`
-            },
-
-            {  
-                "ID":6, "TITLE": "CSS Transition", 
-                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day1/5.html`,
-                "DEMO_LINK" : `${BASE_URL_DEMO}/day1/5.html`,
-                "YOUTUBE_LINK": `https://youtu.be/TvWV_W7LzVQ`
-            },
         ],
 
         "ASSIGNMENT_LIST" : [
@@ -357,7 +518,7 @@ export class ExtDataService extends DataService {
             {"ID":7, "TITLE": "Divide screen into four blocks, horizontally first then vertically"},
         ]
     };
-    AWEBP_CARD_LIST.push(cardDay1);
+    CARD_LIST.push(cardDay1);
 
 
     /** FEATURED LIST */
@@ -367,28 +528,31 @@ export class ExtDataService extends DataService {
         "SHOW" : true,
         "DEMO_LINK" : `${BASE_URL_DEMO}/day8/chat.html`
     };
-    AWEBP_FEATURED_LIST.push(featured1);
+    FEATURED_LIST.push(featured1);
 
 
-    /** FEATURE LIST ANGULAR */
-    const featuredAngular5= { "ID" : 1,"TITLE" : "Image Block", "SHOW" : true, "YOUTUBE_LINK" : `https://youtu.be/ZDT7BiEBVBA`};
-    AWEBP_FEATURED_ANGULAR_LIST.push(featuredAngular5);
+    /** FEATURE LIST ANGULAR  */
+    const featuredAngular6= { "ID" : 1,"TITLE" : "Facebook Simulation", "SHOW" : false, "YOUTUBE_LINK" : `https://youtu.be/Qq88kYlnY7Q`};
+    FEATURED_ANGULAR_LIST.push(featuredAngular6);
 
-    const featuredAngular4= { "ID" : 1,"TITLE" : "DOM Operation", "SHOW" : true, "YOUTUBE_LINK" : `https://youtu.be/1Yq3wIQOPng`};
-    AWEBP_FEATURED_ANGULAR_LIST.push(featuredAngular4);
+    const featuredAngular5= { "ID" : 1,"TITLE" : "Image Block", "SHOW" : false, "YOUTUBE_LINK" : `https://youtu.be/ZDT7BiEBVBA`};
+    FEATURED_ANGULAR_LIST.push(featuredAngular5);
 
-    const featuredAngular3= { "ID" : 1,"TITLE" : "Static Web Application", "SHOW" : true, "YOUTUBE_LINK" : `https://youtu.be/GHO0cmBJDO4`};
-    AWEBP_FEATURED_ANGULAR_LIST.push(featuredAngular3);
+    const featuredAngular4= { "ID" : 1,"TITLE" : "DOM Operation", "SHOW" : false, "YOUTUBE_LINK" : `https://youtu.be/1Yq3wIQOPng`};
+    FEATURED_ANGULAR_LIST.push(featuredAngular4);
 
-    const featuredAngular2= { "ID" : 1,"TITLE" : "Block over image", "SHOW" : true, "YOUTUBE_LINK" : `https://youtu.be/rKeSpZ-rDIE`};
-    AWEBP_FEATURED_ANGULAR_LIST.push(featuredAngular2);
+    const featuredAngular3= { "ID" : 1,"TITLE" : "Static Web Application", "SHOW" : false, "YOUTUBE_LINK" : `https://youtu.be/GHO0cmBJDO4`};
+    FEATURED_ANGULAR_LIST.push(featuredAngular3);
 
-    const featuredAngular1= { "ID" : 1,"TITLE" : "Horizonal Blocks", "SHOW" : true, "YOUTUBE_LINK" : `https://youtu.be/TvWV_W7LzVQ`};
-    AWEBP_FEATURED_ANGULAR_LIST.push(featuredAngular1);
+    const featuredAngular2= { "ID" : 1,"TITLE" : "Block over image", "SHOW" : false, "YOUTUBE_LINK" : `https://youtu.be/rKeSpZ-rDIE`};
+    FEATURED_ANGULAR_LIST.push(featuredAngular2);
+
+    const featuredAngular1= { "ID" : 1,"TITLE" : "Horizonal Blocks", "SHOW" : false, "YOUTUBE_LINK" : `https://youtu.be/TvWV_W7LzVQ`};
+    FEATURED_ANGULAR_LIST.push(featuredAngular1);
     
 
-    this.AWEBP_CARD_LIST = AWEBP_CARD_LIST;
-    this.AWEBP_FEATURED_LIST = AWEBP_FEATURED_LIST;
-    this.AWEBP_FEATURED_ANGULAR_LIST = AWEBP_FEATURED_ANGULAR_LIST;
+    this.CARD_LIST = CARD_LIST;
+    this.FEATURED_LIST = FEATURED_LIST;
+    this.FEATURED_ANGULAR_LIST = FEATURED_ANGULAR_LIST;
   }
 }

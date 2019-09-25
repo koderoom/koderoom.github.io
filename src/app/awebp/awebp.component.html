@@ -1,3 +1,102 @@
-<p>
-  awebp works!
-</p>
+
+<!--BLOCKS-->
+<div class="conainer-fluid" >
+  <div class="row justify-content-center">
+      
+    <div class="col-md-3 col-lg-3 d-flex flex-column align-items-center" style="max-height: calc(100vh - 3.5rem); z-index:999; position: sticky; top:3.5rem; overflow-y: scroll; ">
+          <button class="btn btn-lg btn-block d-md-none text-light" [ngClass]="bgRef.BG" type="button" data-toggle="collapse" data-target="#sidenav" aria-controls="sidenav" aria-expanded="false" aria-label="Toggle docs navigation">
+              Featured Simulations
+          </button>
+  
+          <nav class="collapse d-md-block mt-1" id="sidenav">
+              <button type="button" class="btn btn-sm text-light d-none d-md-block" [ngClass]="bgRef.BG" style="opacity:.9;">
+                      Featured Demo <span class="badge badge-light"></span>
+              </button>
+
+              <ul class="nav flex-column " style="font-size:small;">
+                <ng-container *ngFor="let iref of FEATURED_ANGULAR_LIST">
+                    <li *ngIf="iref.SHOW" class="nav-item animated pulse  slow"  >
+                        <a class="btn btn-link text-muted pl-0 pb-0" target="_blank" href="{{iref.YOUTUBE_LINK}}">{{iref.TITLE}}</a>
+                    </li>
+                </ng-container>
+              </ul>
+              
+          </nav>
+    </div>
+
+
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6" style="max-height: calc(100vh - 7rem); overflow: auto;">
+        <ng-container *ngFor="let iobj of CARD_LIST;let i = index" >
+        
+        <div *ngIf="iobj.ACTIVE" id="day{{iobj.ID}}" class="card bg-light mb-2 shadow-sm" [ngClass]="{'animated slower fadeIn' : i==0}">
+            <h5 class="card-header text-light" [ngClass]="bgRef.BG">
+                {{iobj.TITLE}}
+            </h5>
+            <div class="card-body">
+                <h5 class="card-title" *ngIf="false">
+                    {{iobj.HEADING}}
+                </h5>
+                <p class="card-text h5 text-justify" [innerHTML]="iobj.DESC">
+                </p>
+            </div>
+
+            <ul class="list-group list-group-flush">
+                <li *ngFor="let demoRef of iobj.DEMO_LIST; let j=index;"  class="list-group-item list-group-item-action ">
+                    
+                  <div class="d-flex justify-content-between align-items-center">
+                      <a  #refel data-toggle="collapse" href="{{i+''+j}}" (click)="toggleCollapse(refel,  demoRef)" attr.data-id="{{i+'' +j}}" class="list-link" style="max-width: 90%">
+                          <span [innerHTML]="demoRef.TITLE"></span>
+                      </a>
+                      
+                      <span class="d-flex justify-content-end align-items-center">
+                          <a *ngIf="demoRef.SOURCE_LINK" target="_blank" [href]="demoRef.SOURCE_LINK" class="badge badge-info badge-pill mr-1" data-toggle="tooltip" data-placement="top" title="Source Code">
+                            <fa-icon [icon]="faFileCode"></fa-icon>
+                          </a>
+                          <a *ngIf="demoRef.SOURCE_LINK1" target="_blank" [href]="demoRef.SOURCE_LINK1" class="badge badge-info badge-pill mr-1" data-toggle="tooltip" data-placement="top" title="Source Code Angular">
+                            <fa-icon [icon]="faFileCode"></fa-icon>
+                          </a>
+                          <a *ngIf="demoRef.DEMO_LINK"  target="_blank" [href]="demoRef.DEMO_LINK" class="badge badge-primary badge-pill" data-toggle="tooltip" data-placement="top" title="Demo">
+                            <fa-icon [icon]="faLaptopCode"></fa-icon>
+                          </a>
+                          <a *ngIf="demoRef.YOUTUBE_LINK"  target="_blank" [href]="demoRef.YOUTUBE_LINK" class="badge badge-danger badge-pill" data-toggle="tooltip" data-placement="top" title="Youtube Video">
+                            <fa-icon [icon]="faYoutube"></fa-icon>
+                          </a>
+                      </span>
+                  </div>
+
+                  <div *ngIf="demoRef.YOUTUBE_LINK" style="margin-top:20px; margin:10px; width:95%;"  class="collapse" id="{{i+ '' + j  }}">
+                      <div class="embed-responsive embed-responsive-16by9">
+                          <!-- <iframe class="embed-responsive-item" [src]="getYoutubeLink(demoRef)" allowfullscreen></iframe> -->
+                      </div>
+                  </div>
+                </li>
+            </ul>
+
+            <div class="card-body pb-2" *ngIf="iobj.ASSIGNMENT_LIST.length > 0">
+              <div class="d-flex justify-content-between" (click)="iobj.showAssignment = !iobj.showAssignment" style="cursor: pointer;">
+                  <span class="card-text h6 text-justify">ASSIGMENTS</span>
+                  <span *ngIf="iobj.showAssignment" class="badge badge-info badge-pill" style="line-height: 2;">Hide</span>
+                  <span *ngIf="!iobj.showAssignment" class="badge badge-info badge-pill" style="line-height: 2;">Show</span>    
+              </div>
+            </div>
+            <ul class="list-group list-group-flush" *ngIf="iobj.showAssignment">
+              <li *ngFor="let demoRef of iobj.ASSIGNMENT_LIST"  class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                  <span [innerHTML]="demoRef.TITLE"></span>
+
+                  <span class="d-flex justify-content-end align-items-center">
+                      <a *ngIf="demoRef.IMG" target="_blank" href="{{demoRef.IMG}}" class="badge badge-info badge-pill mr-1" style="font-size:xx-small;">ASSIGNMENT</a>
+                  </span>
+              </li>
+            </ul>
+        </div>
+        </ng-container>
+    </div>
+
+
+    <div class="col-md-3 col-lg-3 d-flex flex-column align-items-center" style="max-height: calc(100vh - 3.5rem); z-index:999; position: sticky; top:3.5rem; overflow-y: scroll; ">
+        
+    </div>
+  </div>
+</div>
+
+

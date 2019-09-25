@@ -1,55 +1,66 @@
-# Koderoom Home
+# BUILD COMMAND
 
-
-## Syntax Highlight
-* [Angular Syntax Highlight](https://github.com/MurhafSousli/ngx-highlightjs)
-* [Hightlight JS](https://highlightjs.org/)
-
-## Typescript issue; 
-* For Angular CLI Version [6.1.5], following command could be useful. Typescript version in package.json
 ```
-  "typescript": "^2.9.2" // OR ABOVE.
+    ng build --prod --base-href "https://koderoom.github.io/"
+    npx ngh --dir=dist/Aug19Home
+
+    git push -u origin angular7
 ```
 
+# GENERATE COMPOENENT
+* `ng g c awebp --skipTests=true`
+* `ng g c java --skipTests=true`
+* `ng g c springcore --skipTests=true`
+* `ng g c projectref --skipTests=true`
 
-## Angular Flexlayout Module
-* [Angular Flexlayout](https://github.com/angular/flex-layout)
-```
-  npm install @angular/flex-layout --save
-```
 
-## Angular Material Module
-* [Angular Material](https://material.angular.io/)
-```
-  ng add @angular/material
-```
+# GENERATE SERVICE
+* `ng generate service common/awebp --skipTests=true`
+* `ng generate service common/java --skipTests=true`
+* `ng generate service common/springcore --skipTests=true`
+* `ng generate service common/projectref --skipTests=true`
 
-## Generate Additional Module
-```
-    ng generate module route --spec=false --flat=true
-```
 
-## Generate Component
+# ANGULAR ECLIPSEE
 ```
-   ng g c home --spec=false --module=route
-   ng g c page1 --spec=false --module=route
-   ng g c page2 --spec=false --module=route
-   ng g c flex-prac-1 --spec=false --module=route
-```
-
-## Generate Service/Enum
-```
-   ng g s common/commondata --spec=false
-
-   ng g enum common/appConstants --spec=false
+    ng build --delete-output-path=false --output-path=.. --base-href "/test" --deploy-url "/test/"
 ```
 
 
-
-## Github Page Setup
-* [Angular Cli](https://github.com/angular-schule/angular-cli-ghpages)
+# ES-6 AND TS COMPILATION STEPS
 ```
-  npm i angular-cli-ghpages --save-dev
-  ng build --prod
-  npx ngh --dir=dist/koderoom-home --branch=master
+{
+  "compilerOptions": {
+    "target": "es5",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */
+    "module": "commonjs",                     /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+    "allowJs": true,                       /* Allow javascript files to be compiled. */
+    "sourceMap": true,                     /* Generates corresponding '.map' file. */
+    "outDir": "./bin",                        /* Redirect output structure to the directory. */
+    "rootDir": "./src",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+
+    /* Strict Type-Checking Options */
+    "strict": true,                           /* Enable all strict type-checking options. */
+  }
+}    
+```
+
+* TSC Compile Script at package.json
+```
+    "scripts": {
+        "compile" : "tsc -w -p tsconfig.json"
+    },
+```
+
+* DEBUG SCRIPT at Debug Config File
+```
+    {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch Program",
+        "sourceMaps": true,
+        "program": "${workspaceFolder}/src/main.js",
+        "outFiles": [
+            "${workspaceRoot}/bin/**/*.js"
+        ]
+    }
 ```

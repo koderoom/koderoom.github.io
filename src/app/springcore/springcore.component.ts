@@ -7,16 +7,16 @@ import { DataexamService } from 'src/app/common/dataexam.service';
 import { AppConstantsService } from 'src/app/common/app-constants.service';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faFileCode, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
-import { AwebpService } from 'src/app/common/awebp.service';
 import { Router } from '@angular/router';
+import { SpringcoreService } from 'src/app/common/springcore.service';
 
 
 @Component({
-  selector: 'app-awebp',
-  templateUrl: './awebp.component.html',
-  styleUrls: ['./awebp.component.css']
+  selector: 'app-springcore',
+  templateUrl: '../awebp/awebp.component.html',
+  styleUrls: ['../awebp/awebp.component.css']
 })
-export class AwebpComponent implements OnInit, AfterViewInit {
+export class SpringcoreComponent implements OnInit, AfterViewInit {
 
   public bgRef: any = {};
 
@@ -33,10 +33,10 @@ export class AwebpComponent implements OnInit, AfterViewInit {
   public TOPLIST:any[];
 
   constructor(
-    private router: Router,
     public appConstatnts: AppConstantsService,
-    public data: AwebpService,
+    public data: SpringcoreService,
     public dataexam: DataexamService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -53,7 +53,7 @@ export class AwebpComponent implements OnInit, AfterViewInit {
         this.bgRef = bgRef;
       }, 10);
     });
-    
+
     this.appConstatnts.updateSelMenu(this.router.url);
   }
 
