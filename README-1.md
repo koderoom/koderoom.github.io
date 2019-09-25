@@ -1,4 +1,8 @@
 # Koderoom Home
+```
+  ng build --prod
+  npx ngh --dir=dist/koderoom-home --branch=master
+```
 
 
 ## Syntax Highlight

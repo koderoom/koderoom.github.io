@@ -1,8 +1,8 @@
 # BUILD COMMAND
 
 ```
-    ng build --prod --base-href "https://koderoom.github.io/"
-    npx ngh --dir=dist/Aug19Home
+    ng build --prod
+    npx ngh --dir=dist/Aug19Home --branch=master
 
     git push -u origin angular7
 ```
