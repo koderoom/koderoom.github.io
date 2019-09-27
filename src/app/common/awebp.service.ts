@@ -501,21 +501,42 @@ export class AwebpService extends DataService {
 
         "DEMO_LIST" : [
             {  
-                "ID":1, "TITLE": "HTML & CSS Fundamental", 
+                "ID":1, "TITLE": "Hello HTML and CSS", 
                 "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day1/1.html`,
                 "DEMO_LINK" : `${BASE_URL_DEMO}/day1/1.html`
             },
-
+            {  
+                "ID":2, "TITLE": "Internal Styling with Html", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day1/2.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day1/2.html`
+            },
+            {  
+                "ID":3, "TITLE": "External Styling with Html", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day1/3.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day1/3.html`
+            },
+            {  
+                "ID":4, "TITLE": "Writing name in Google Style using HTML and CSS", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day1/4.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day1/4.html`
+            },
+            {  
+                "ID":5, "TITLE": "Working with Height and border css property", 
+                "SOURCE_LINK" : `${BASE_URL_SOURCE}/tree/master/day1/5.html`,
+                "DEMO_LINK" : `${BASE_URL_DEMO}/day1/5.html`
+            },
         ],
 
         "ASSIGNMENT_LIST" : [
-            {"ID":1, "TITLE": "Html Tags Fundatmental - Blocking and Non-Blocking."},
-            {"ID":2, "TITLE": "Html Tags Fundatmental - Form Elements and Non - Form Elements."},
-            {"ID":3, "TITLE": "CSS Styling - Inline, Internal, External"},
-            {"ID":4, "TITLE": "Center align elements"},
-            {"ID":5, "TITLE": "Vertical division of screen"},
-            {"ID":6, "TITLE": "Horizonatal division of screen"},
-            {"ID":7, "TITLE": "Divide screen into four blocks, horizontally first then vertically"},
+            {"ID":1, "TITLE": "Write down and decode the first HTML program?"},
+            {"ID":2, "TITLE": "Integrate Inline Styling with HTML?"},
+            {"ID":3, "TITLE": "Integrate Internal Styling with HTML"},
+            {"ID":3, "TITLE": "Integrate External Styling with HTML"},
+            {"ID":4, "TITLE": "Study the basics CSS property - background, color, font-family, font-size, font-weight"},
+            {"ID":5, "TITLE": "Write your name in Google Style using HTML and CSS?"},
+            {"ID":6, "TITLE": "Write your name in Google Style without using Inline CSS?"},
+            {"ID":7, "TITLE": "Study the basic CSS property - height, width, border, padding, margin"},
+            {"ID":8, "TITLE": "Practical demo using border, height and width"},
         ]
     };
     CARD_LIST.push(cardDay1);
