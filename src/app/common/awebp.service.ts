@@ -545,18 +545,18 @@ export class AwebpService extends DataService {
     /** FEATURED LIST */
     const featured1= {
         "ID" : 1,
-        "TITLE" : "Chat Simulation",
+        "TITLE" : "Google Style Name",
         "SHOW" : true,
-        "DEMO_LINK" : `${BASE_URL_DEMO}/day8/chat.html`
+        "DEMO_LINK" : `${BASE_URL_DEMO}/day1/4.html`
     };
     FEATURED_LIST.push(featured1);
 
 
     /** FEATURE LIST ANGULAR  */
-    const featuredAngular6= { "ID" : 1,"TITLE" : "Facebook Simulation", "SHOW" : false, "YOUTUBE_LINK" : `https://youtu.be/Qq88kYlnY7Q`};
+    const featuredAngular6= { "ID" : 1,"TITLE" : "Google Style Name", "SHOW" : true, "DEMO_LINK" : `${BASE_URL_DEMO}/day1/4.html`};
     FEATURED_ANGULAR_LIST.push(featuredAngular6);
 
-    const featuredAngular5= { "ID" : 1,"TITLE" : "Image Block", "SHOW" : false, "YOUTUBE_LINK" : `https://youtu.be/ZDT7BiEBVBA`};
+    const featuredAngular5= { "ID" : 1,"TITLE" : "CSS Heights", "SHOW" : true, "DEMO_LINK" : `${BASE_URL_DEMO}/day1/5.html`};
     FEATURED_ANGULAR_LIST.push(featuredAngular5);
 
     const featuredAngular4= { "ID" : 1,"TITLE" : "DOM Operation", "SHOW" : false, "YOUTUBE_LINK" : `https://youtu.be/1Yq3wIQOPng`};
