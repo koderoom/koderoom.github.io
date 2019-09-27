@@ -16,7 +16,7 @@
               <ul class="nav flex-column " style="font-size:small;">
                 <ng-container *ngFor="let iref of FEATURED_ANGULAR_LIST">
                     <li *ngIf="iref.SHOW" class="nav-item animated pulse  slow"  >
-                        <a class="btn btn-link text-muted pl-0 pb-0" target="_blank" href="{{iref.YOUTUBE_LINK}}">{{iref.TITLE}}</a>
+                        <a class="btn btn-link text-muted pl-0 pb-0" target="_blank" href="{{iref.YOUTUBE_LINK || iref.DEMO_LINK}}">{{iref.TITLE}}</a>
                     </li>
                 </ng-container>
               </ul>
